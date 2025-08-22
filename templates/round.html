@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+  <title>Round {{ round_num }}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h2>Round {{ round_num }}: Choose your favorite</h2>
+    <form method="POST">
+      <div class="round-container">
+        {% for i in range(2) %}
+          <div class="album-card">
+            {% if pair[i]['Picname'] %}
+              <img src="{{ url_for('covers', filename=pair[i]['Picname']) }}" alt="cover">
+            {% else %}
+              <img src="{{ pair[i]['Cover'] }}" alt="cover">
+            {% endif %}
+            <strong>{{ pair[i]['Name'] }}</strong>
+            <em>{{ pair[i]['Artist'] }}</em><br><br>
+            <button name="choice" value="{{ i }}">Choose</button>
+          </div>
+        {% endfor %}
+      </div>
+    </form>
+  </div>
+</body>
+</html>
+

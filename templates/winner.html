@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+  <title>Winner</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1 style="text-align:center;">🏆 Album Vincitore</h1>
+    <div class="winner-card">
+      {% if album['Picname'] %}
+        <img src="{{ url_for('covers', filename=album['Picname']) }}" alt="cover">
+      {% else %}
+        <img src="{{ album['Cover'] }}" alt="cover">
+      {% endif %}
+      <h2>{{ album['Name'] }}</h2>
+      <h3>{{ album['Artist'] }}</h3>
+    </div>
+
+    <div class="play-again">
+      <form action="{{ url_for('index') }}">
+        <button type="submit">🔁 Play Again</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
+

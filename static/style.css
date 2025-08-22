@@ -1,0 +1,179 @@
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+body {
+    background: linear-gradient(135deg, #1e1e2f, #2a2a40);
+    color: #e0e0e0;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: #2c2c3e;
+    margin-top: 60px;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0px 8px 24px rgba(0,0,0,0.4);
+    width: 90%;
+    max-width: 1200px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #f5f5f5;
+}
+
+form label {
+    font-weight: 600;
+    display: block;
+    margin: 15px 0 8px;
+}
+
+select, input[type="checkbox"] {
+    margin-top: 5px;
+}
+
+select {
+    width: 100%;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #444;
+    background-color: #1e1e2f;
+    color: #fff;
+}
+
+input[type="checkbox"] {
+    accent-color: #6c63ff; /* viola moderno */
+}
+
+button {
+    display: block;
+    margin: 25px auto 0;
+    padding: 10px 24px;
+    border: none;
+    border-radius: 8px;
+    background-color: #6c63ff;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+button:hover {
+    background-color: #817aff;
+}
+
+.error {
+    color: #ff6b6b;
+    text-align: center;
+    font-weight: 600;
+}
+
+/* Titoli round/winner */
+h2, h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #f5f5f5;
+}
+
+/* Container round */
+.round-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+/* Card album */
+.album-card {
+    background-color: #3a3a50;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    width: 300px; /* prima 220px */
+    box-shadow: 0px 6px 18px rgba(0,0,0,0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.album-card img {
+    border-radius: 8px;
+    width: 100%;
+    max-width: 300px; /* prima 200px */
+}
+
+.album-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 24px rgba(0,0,0,0.5);
+}
+
+/* Album title/artist */
+.album-card strong {
+    display: block;
+    margin-top: 10px;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.album-card em {
+    font-size: 14px;
+    color: #cfcfcf;
+}
+
+/* Winner section */
+.winner-card {
+    background-color: #3a3a50;
+    padding: 30px;
+    border-radius: 14px;
+    text-align: center;
+    width: 340px;
+    margin: 0 auto;
+    box-shadow: 0px 8px 24px rgba(0,0,0,0.4);
+}
+
+.winner-card img {
+    border-radius: 12px;
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 20px;
+}
+
+.play-again {
+    margin-top: 30px;
+    text-align: center;
+}
+
+/* Griglia checkbox */
+.checkbox-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 10px 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.checkbox-grid label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: #3a3a50;
+    padding: 6px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.checkbox-grid label:hover {
+    background: #505070;
+}
+
+.checkbox-grid input {
+    transform: scale(1.1);
+}
+

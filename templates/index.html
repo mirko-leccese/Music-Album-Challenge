@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+  <title>Album Battle</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>🎵 Album Tournament</h1>
+
+    {% if error %}
+      <p class="error">{{ error }}</p>
+    {% endif %}
+
+    <form method="POST">
+      <label for="num_albums">Select number of albums:</label>
+      <select name="num_albums" id="num_albums">
+        <option value="4">4</option>
+        <option value="8">8</option>
+        <option value="16">16</option>
+        <option value="32">32</option>
+      </select>
+
+      <label>Select genre(s):</label>
+      <div class="checkbox-grid">
+        {% for genre in genres %}
+          <label>
+            <input type="checkbox" name="genres" value="{{ genre }}"> {{ genre }}
+          </label>
+        {% endfor %}
+      </div>
+
+      <label>Select language(s):</label>
+      <div class="checkbox-grid">
+        {% for lang in languages %}
+          <label>
+            <input type="checkbox" name="languages" value="{{ lang }}"> {{ lang }}
+          </label>
+        {% endfor %}
+      </div>
+
+      <button type="submit">Start</button>
+    </form>
+  </div>
+</body>
+</html>
+
